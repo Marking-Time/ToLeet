@@ -7,3 +7,4 @@
 - Worked on code to convert roman numerals into arabic
   - string to int conversions may require try except logic
   - Code doesn't work properly - exits with traceback
+  - Consider breaking out roman2arabic untill it works
