@@ -9,4 +9,6 @@
   - Code doesn't work properly - exits with traceback
   - Consider breaking out roman2arabic untill it works
   - may need regx
-- Got to_roman to work ouputting a tuple including a list of numbers and a string of the input text without numbers
+- Got to_roman to work ouputting a tuple including a list of numbers and a string of the input text without numbers:
+  - need to put individual numbers into list together
+-  Put numbers into a string 
