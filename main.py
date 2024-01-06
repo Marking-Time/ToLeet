@@ -19,18 +19,26 @@ print()
 
 def to_roman(number):
   number1 = []
-  text = []
+  text = ""
   for letter in input_string:
-    letter = int(letter)
-    if isinstance(letter, str):
-      text.append(letter)
-      # print(text)
-    if isinstance(letter, int):
-      print(True)
+    try:
+      letter =  int(letter)
+    except:
+      letter = letter
+    if type(letter) == int:
       number1.append(letter)
-      print(number1)
+    else:
+      text += letter
+    
+    # if isinstance(letter, str):
+    #   text.append(letter)
+    #   # print(text)
+    # if isinstance(letter, int):
+    #   print(True)
+    #   number1.append(letter)
+    #   print(number1)
 
-  return number1
+  return number1, text
 
 print(to_roman(input_string))
       
