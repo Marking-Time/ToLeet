@@ -13,3 +13,5 @@
   - need to put individual numbers into list together
 -  Put numbers into a string
 ### Regex yields a list of all the matches
+- m is a list of all the matches
+- each list member must be converted to roman numerals

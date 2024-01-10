@@ -44,6 +44,11 @@ m = re.findall(r"(\d+)", input_string)
 # print(m.groups())
 print(m)
 
+for item in m:
+  print()
+  for number in item:
+    print(number)
+
 
 
   
