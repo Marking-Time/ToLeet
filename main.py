@@ -46,6 +46,10 @@ print(m)
 
 for item in m:
   print()
+  print(item)
+  # print("length: " + str(len(item)))
+  length = len(item)
+  print("length: " + str(length))
   for number in item:
     print(number)
 
