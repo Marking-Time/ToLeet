@@ -18,6 +18,13 @@
 - Broke list into individual numbers and calculated the length
 ### Code put into functions
 - Roman numerals only go to 3999, so the calcualtor will compensate by:
-  - multiplying the // (floor ) result by M
-  - multiplying the % result by M
-  - Logic problems 
+  - Multiplying the // (floor ) result by M - Returns whole number division
+  - Multiplying the % result by M - Returns remainder of whole number division
+  - Logic problems
+
+#### Convert pseudo logic
+  - number // 1000 - gets number of 1000s
+  - number % 1000 - gets *remainder* of 1000s division
+  - *remainder* is divided by 500 to get the "D" number in roman
+    - 
+  - 

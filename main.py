@@ -62,7 +62,7 @@ def convert(numbers):
     print(item)
     print(str(item // 1000) + " modulus")
 
-    if item//100 > 0:
+    if item//1000 > 0:
       n_thousands = item //1000
       r_thousands = item % 1000
       print(thousands)
