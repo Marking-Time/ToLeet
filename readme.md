@@ -25,6 +25,5 @@
 #### Convert pseudo logic
   - number // 1000 - gets number of 1000s
   - number % 1000 - gets *remainder* of 1000s division
-  - *remainder* is divided by 500 to get the "D" number in roman
-    - 
-  - 
+  - remainder is divided by 500 to get the "D" number in roman
+    
