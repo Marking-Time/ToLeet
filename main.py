@@ -39,19 +39,27 @@ print(to_roman(input_string))
 
 #################################
 ################### Regex ###################
-m = re.findall(r"(\d+)", input_string)
-# print(m.group(0,1))
-# print(m.groups())
-print(m)
+def find_numbers(input_string):
+  m = re.findall(r"(\d+)", input_string)
+  # print(m.group(0,1))
+  # print(m.groups())
+  print(m)
+  return m
 
-for item in m:
-  print()
-  print(item)
-  # print("length: " + str(len(item)))
-  length = len(item)
-  print("length: " + str(length))
-  for number in item:
-    print(number)
+numbers = find_numbers(input_string)
+
+
+def convert(numbers):
+  for item in numbers:
+    print()
+    print(item)
+    # print("length: " + str(len(item)))
+    length = len(item)
+    print("length: " + str(length))
+
+convert(numbers)
+  # for number in item:
+  #   print(number)
 
 
 

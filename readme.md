@@ -16,3 +16,4 @@
 - m is a list of all the matches
 - each list member must be converted to roman numerals
 - Broke list into individual numbers and calculated the length
+### Code put into functions
