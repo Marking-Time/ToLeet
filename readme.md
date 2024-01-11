@@ -17,3 +17,6 @@
 - each list member must be converted to roman numerals
 - Broke list into individual numbers and calculated the length
 ### Code put into functions
+- Roman numerals only go to 3999, so the calcualtor will compensate by:
+  - multiplying the // (floor ) result by M
+  - Logic problems 

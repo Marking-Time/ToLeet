@@ -50,14 +50,40 @@ numbers = find_numbers(input_string)
 
 
 def convert(numbers):
+  roman = {"thousands": 0, "r_thousands": 0, "f_hundred": 0, "r_f_hundred": 0, "hundred": 0, "r_hundred": 0}
+  thousands = ""
   for item in numbers:
+    n_thousands = 0
+    r_thousands = 0
+    hundred = 0
+    r_f_hundred = 0
+    item = int(item)
     print()
     print(item)
-    # print("length: " + str(len(item)))
-    length = len(item)
-    print("length: " + str(length))
+    # print(str(item // 1000) + " modulus")
 
-convert(numbers)
+    n_thousands = item //1000
+    r_thousands = item % 1000
+    print(r_thousands)
+    roman['thousands'] = n_thousands
+    roman['r_thousands'] = r_thousands
+
+    if r_thousands > 500:
+      f_hundred = r_thousands//500
+      r_f_hundred = r_thousands%500
+      roman["f_hundred"] = f_hundred
+      roman["r_f_hundred"] = r_f_hundred
+      print(f_hundred)
+      print(r_f_hundred)
+
+    if r_f_hundred > 100:
+      roman["hundred"] = r_f_hundred//100
+      roman["r_hundred"] = r_f_hundred%100
+      
+    print(roman) 
+    return roman
+
+print(convert(numbers))
   # for number in item:
   #   print(number)
 
