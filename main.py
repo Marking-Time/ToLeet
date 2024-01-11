@@ -52,21 +52,23 @@ numbers = find_numbers(input_string)
 def convert(numbers):
   roman = {"thousands": 0, "r_thousands": 0, "f_hundred": 0, "r_f_hundred": 0, "hundred": 0, "r_hundred": 0}
   thousands = ""
+  n_thousands = 0
+  r_thousands = 0
+  hundred = 0
+  r_f_hundred = 0
   for item in numbers:
-    n_thousands = 0
-    r_thousands = 0
-    hundred = 0
-    r_f_hundred = 0
     item = int(item)
     print()
     print(item)
-    # print(str(item // 1000) + " modulus")
+    print(str(item // 1000) + " modulus")
 
-    n_thousands = item //1000
-    r_thousands = item % 1000
-    print(r_thousands)
-    roman['thousands'] = n_thousands
-    roman['r_thousands'] = r_thousands
+    if item//100 > 0:
+      n_thousands = item //1000
+      r_thousands = item % 1000
+      print(thousands)
+      print(r_thousands)
+      roman['thousands'] = n_thousands
+      roman['r_thousands'] = r_thousands
 
     if r_thousands > 500:
       f_hundred = r_thousands//500
