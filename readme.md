@@ -30,4 +30,6 @@
 #### Begin Day with data cleaning 
 - remove depricated code
 - add labels to print to show var names
+
+### Code breaks arabic into dictionary at roman intervals 
     
