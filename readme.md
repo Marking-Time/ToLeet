@@ -26,4 +26,8 @@
   - number // 1000 - gets number of 1000s
   - number % 1000 - gets *remainder* of 1000s division
   - remainder is divided by 500 to get the "D" number in roman
+
+#### Begin Day with data cleaning 
+- remove depricated code
+- add labels to print to show var names
     

@@ -15,26 +15,10 @@ def to_leet(string):
     new_string += letter
   return new_string
 
-print(input_string)
-print(to_leet(input_string))
+print("input_string: "+input_string)
+print("toleet: "+to_leet(input_string))
 print()
 
-def to_roman(number):
-  number1 = ""
-  text = ""
-  for letter in input_string:
-    try:
-      letter =  int(letter)
-    except:
-      letter = letter
-    if type(letter) == int:
-      number1+= str(letter)
-    else:
-      text += str(letter)
-   
-  return number1, text
-
-print(to_roman(input_string))
 
 
 #################################
@@ -43,7 +27,7 @@ def find_numbers(input_string):
   m = re.findall(r"(\d+)", input_string)
   # print(m.group(0,1))
   # print(m.groups())
-  print(m)
+  print("Numbers list as m: "+str(m))
   return m
 
 numbers = find_numbers(input_string)
@@ -59,31 +43,18 @@ def convert(numbers):
   for item in numbers:
     item = int(item)
     print()
-    print(item)
-    print(str(item // 1000) + " modulus")
+    # print(item)
+    # print(str(item // 1000) + " modulus")
 
     if item//1000 > 0:
       n_thousands = item //1000
       r_thousands = item % 1000
-      print(thousands)
-      print(r_thousands)
+      # print(n_thousands)
+      # print(r_thousands)
       roman['thousands'] = n_thousands
       roman['r_thousands'] = r_thousands
 
-    if r_thousands > 500:
-      f_hundred = r_thousands//500
-      r_f_hundred = r_thousands%500
-      roman["f_hundred"] = f_hundred
-      roman["r_f_hundred"] = r_f_hundred
-      print(f_hundred)
-      print(r_f_hundred)
-
-    if r_f_hundred > 100:
-      roman["hundred"] = r_f_hundred//100
-      roman["r_hundred"] = r_f_hundred%100
-      
-    print(roman) 
-    return roman
+  return roman
 
 print(convert(numbers))
   # for number in item:
