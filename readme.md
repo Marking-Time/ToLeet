@@ -41,4 +41,8 @@
   - Need to ensure all numbers in list are processed
 # LOL .... This might be right
 ### Need to run some tests, but toRoman() seems to be feature complete
+- Fails on fours
+- Problem with convert
+  - The convert() function doesn't work correctly with all numbers
+  - Need to rework the logic
 
