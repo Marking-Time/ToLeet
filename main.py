@@ -75,8 +75,10 @@ def convert(numbers):
 print(convert(numbers))
 roman = convert(numbers)
 
+converted = {}
+
 def toRoman(roman):
-  converted = {'thousands':"", 'f_hundred':" ", 'hundred':" ", 'fifty':" ", 'ten': " "}
+  converted = {'thousands':"", 'f_hundred':"", 'hundred':"", 'fifty':"", 'ten': "", 'five': "", "one": ""}
   converted['thousands'] = str(roman["thousands"]) + "xM" 
 
   if roman['f_hundred']!=" ":
@@ -91,13 +93,26 @@ def toRoman(roman):
     for i in range(roman['fifty']):
       converted['fifty'] += "L"
 
-  # if roman['ten']!=" ":
-  #   converted[]
+  if roman['ten']!=" ":
+    for i in range(roman['ten']):
+      converted['ten'] += "X"
+
+  if roman['five'] !=" ":
+    for i in range(roman['five']):
+      converted['five'] +="V"
+
+  if roman['one'] !=" ":
+    for i in range(roman['one']):
+      converted['one'] +="I"
 
   # converted['f_hundred']= str(roman['f_hundred'])
-  print(converted)
+  return converted
+  #print(converted)
 
-toRoman(roman)
+print(toRoman(roman))
+
+converted = toRoman(roman)
+print(converted['thousands'] + converted['f_hundred']+converted['hundred']+converted['fifty']+converted['ten']+converted['five']+converted['one'])
   
 
 

@@ -33,5 +33,7 @@
 
 ### Code breaks arabic into dictionary at roman intervals 
 - Still some problems -  code doesn't trigger untill over 1000. This stops it from running when the number is less.
-  - Need to remove the 0-9 digits from the toleet code and allow it to be converted in to_roman 
+  - Need to remove the 0-9 digits from the toleet code and allow it to be converted in to_roman
+### Arabic to Roman Complete
+- Need to fix fours and nines
 
