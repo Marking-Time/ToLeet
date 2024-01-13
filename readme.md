@@ -35,5 +35,10 @@
 - Still some problems -  code doesn't trigger untill over 1000. This stops it from running when the number is less.
   - Need to remove the 0-9 digits from the toleet code and allow it to be converted in to_roman
 ### Arabic to Roman Complete
-- Need to fix fours and nines
+
+## To Do:
+  - Need to fix fours and nines
+  - Need to ensure all numbers in list are processed
+# LOL .... This might be right
+### Need to run some tests, but toRoman() seems to be feature complete
 

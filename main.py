@@ -4,7 +4,7 @@ import regex as re
 
 leet = {"a": "4", "b": "13", "c":"[", "d":"[)", "e":"3", "f":"|=","g": "6", "h":"#", "i": "|","j":".]", "k":"|<", "l":"1","m":"|y|", "n":"|\|", "o":"0", "p":"|>", "q":"o,","r":"I2", "s":"5", "t":"7", "u":"[_]", "v":"-v", "w":"|v|", "x":"}{", "y":"'/","z":"2", "1":"i", "2":"ii", "3":"iii", "4":"iv", "5":"v", "6":"vi", "7":"vii", "8":"viii", "9":"ix","0":".", " ":" ", "-":"3", ".":"3", ",":"3"}
 
-input_string = "9WASHINGTON  Sen. Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common 5641679 ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday She was 90 xx"
+input_string = "9WASHINGTON  Sen. Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common 564998 ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday She was 90 xx"
 
 def to_leet(string):
   string = str(string)
@@ -81,29 +81,46 @@ def toRoman(roman):
   converted = {'thousands':"", 'f_hundred':"", 'hundred':"", 'fifty':"", 'ten': "", 'five': "", "one": ""}
   converted['thousands'] = str(roman["thousands"]) + "xM" 
 
-  if roman['f_hundred']!=" ":
-    for i in range(roman['f_hundred']):
-      converted['f_hundred'] +="D"
-
-  if roman['hundred']!=" ":
-    for i in range(roman['hundred']):
-      converted['hundred'] += "C"
+  if roman['f_hundred']!="":
+    if roman['f_hundred']<9:
+      for i in range(roman['f_hundred']):
+        converted['f_hundred'] +="D"
+    else:
+      converted['f_hundred'] += "CM"
       
+  if roman['hundred']!="":
+    if roman['hundred']<4:
+      for i in range(roman['hundred']):
+        converted['hundred'] += "C"
+    else:
+      converted['hundred'] += "CD"
+  
   if roman['fifty']!= " ":
-    for i in range(roman['fifty']):
-      converted['fifty'] += "L"
-
+    if roman['fifty']<9:
+      for i in range(roman['fifty']):
+        converted['fifty'] += "L"
+    else:
+      converted['fifty'] += "XC"
   if roman['ten']!=" ":
-    for i in range(roman['ten']):
-      converted['ten'] += "X"
+    if roman['ten']<4:
+      for i in range(roman['ten']):
+        converted['ten'] += "X"
+    else:
+      converted['ten']+= "XL"
 
   if roman['five'] !=" ":
-    for i in range(roman['five']):
-      converted['five'] +="V"
+    if roman['five']<9:
+      for i in range(roman['five']):
+        converted['five'] +="V"
+    else:
+      converted['five']+="IX"
 
   if roman['one'] !=" ":
-    for i in range(roman['one']):
-      converted['one'] +="I"
+    if roman['one']<4:
+      for i in range(roman['one']):
+        converted['one'] +="I"
+    else:
+      converted['one'] +="IV"
 
   # converted['f_hundred']= str(roman['f_hundred'])
   return converted
