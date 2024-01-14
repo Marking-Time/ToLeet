@@ -28,126 +28,157 @@ def find_numbers(input_string):
   return m
 
 numbers = find_numbers(input_string)
+print(numbers)
 
-
-def convert(numbers):
-  roman = {
-           "thousands": 0, 
-           "r_thousands": 0, 
-           "f_hundred": 0, 
-           "r_f_hundred": 0, 
-           "hundred": 0, 
-           "r_hundred": 0, 
-           "fifty":0, 
-           "r_fifty":0, 
-           "ten":0, 
-           "r_ten":0, 
-           "five":0,
-           "r_five":0, 
-           "one":0
-          }
-  thousands = ""
-  n_thousands = 0
-  r_thousands = 0
-  hundred = 0
-  r_f_hundred = 0
-  for item in numbers:
-    item = int(item)
-    print()
-
-    if item//1000 > 0:
-      # n_thousands = item //1000
-      # r_thousands = item % 1000
-      # roman['thousands'] = n_thousands
-      # roman['r_thousands'] = r_thousands
-      print(item)
-      print(item%1000)
-      roman['thousands'] = item//1000
-      roman['r_thousands'] = item%1000
-
-    if r_thousands >= 500:
-      roman['f_hundred'] = r_thousands//500
-      roman['r_f_hundred'] = r_thousands%500
-
-    if roman['r_f_hundred'] >= 100:
-      roman['hundred'] = roman['r_f_hundred']//100
-      roman['r_hundred'] = roman['r_f_hundred']%100
-
-    if roman['r_hundred'] >= 50:
-      roman['fifty'] = roman["r_hundred"]//50
-      roman['r_fifty'] = roman['r_hundred']%50
-
-    if roman['r_fifty'] >=10:
-      roman['ten'] = roman['r_fifty']//10
-      roman['r_ten'] = roman['r_fifty']%10
-      print(roman['r_ten'])
-
-    if roman['r_ten'] >=5:
-      roman['five'] = roman['r_ten']//5
-      roman['r_five'] = roman['r_ten']%5
-
-    roman['one'] = roman['r_five']
-
-  return roman
-
-print(convert(numbers))
-roman = convert(numbers)
-
-converted = {}
-
-def toRoman(roman):
-  converted = {'thousands':"", 'f_hundred':"", 'hundred':"", 'fifty':"", 'ten': "", 'five': "", "one": ""}
-  converted['thousands'] = str(roman["thousands"]) + "xM" 
-
-  if roman['f_hundred']!="":
-    if roman['f_hundred']<9:
-      for i in range(roman['f_hundred']):
-        converted['f_hundred'] +="D"
-    else:
-      converted['f_hundred'] += "CM"
+for item in numbers:
+  length = len(item)
+  roman = ""
+  while length > 0:
+   
+    
+    # print(length)
+    # print(str(item[-1]) + " last number")
+    digit = item[length-1]
+    roman += digit
+    print(digit)
+    length-=1
+    print(str(length) + "length")
+    print("roman" + roman)
+    # if digit == 9:
+    #   digit = "IX"
+    #   roman+=digit
+    #   print(roman)
+      # print("length "+str(length))
       
-  if roman['hundred']!="":
-    if roman['hundred']<4:
-      for i in range(roman['hundred']):
-        converted['hundred'] += "C"
-    else:
-      converted['hundred'] += "CD"
+      # length-=1
+      # print("length - "+str(length))
+      # print(item)
+
+  # for num in item:
+  #   length = len(num)
+    
+                 
+  #   print(num[-len(num)])
+
+
+# def convert(numbers):
+#   roman = {
+#            "thousands": 0, 
+#            "r_thousands": 0, 
+#            "f_hundred": 0, 
+#            "r_f_hundred": 0, 
+#            "hundred": 0, 
+#            "r_hundred": 0, 
+#            "fifty":0, 
+#            "r_fifty":0, 
+#            "ten":0, 
+#            "r_ten":0, 
+#            "five":0,
+#            "r_five":0, 
+#            "one":0
+#           }
+#   thousands = ""
+#   n_thousands = 0
+#   r_thousands = 0
+#   hundred = 0
+#   r_f_hundred = 0
+#   for item in numbers:
+#     item = int(item)
+#     print()
+
+#     if item//1000 > 0:
+#       # n_thousands = item //1000
+#       # r_thousands = item % 1000
+#       # roman['thousands'] = n_thousands
+#       # roman['r_thousands'] = r_thousands
+#       print(item)
+#       print(item%1000)
+#       roman['thousands'] = item//1000
+#       roman['r_thousands'] = item%1000
+
+#     if r_thousands >= 500:
+#       roman['f_hundred'] = r_thousands//500
+#       roman['r_f_hundred'] = r_thousands%500
+
+#     if roman['r_f_hundred'] >= 100:
+#       roman['hundred'] = roman['r_f_hundred']//100
+#       roman['r_hundred'] = roman['r_f_hundred']%100
+
+#     if roman['r_hundred'] >= 50:
+#       roman['fifty'] = roman["r_hundred"]//50
+#       roman['r_fifty'] = roman['r_hundred']%50
+
+#     if roman['r_fifty'] >=10:
+#       roman['ten'] = roman['r_fifty']//10
+#       roman['r_ten'] = roman['r_fifty']%10
+#       print(roman['r_ten'])
+
+#     if roman['r_ten'] >=5:
+#       roman['five'] = roman['r_ten']//5
+#       roman['r_five'] = roman['r_ten']%5
+
+#     roman['one'] = roman['r_five']
+
+#   return roman
+
+# print(convert(numbers))
+# roman = convert(numbers)
+
+# converted = {}
+
+# def toRoman(roman):
+#   converted = {'thousands':"", 'f_hundred':"", 'hundred':"", 'fifty':"", 'ten': "", 'five': "", "one": ""}
+#   converted['thousands'] = str(roman["thousands"]) + "xM" 
+
+#   if roman['f_hundred']!="":
+#     if roman['f_hundred']<9:
+#       for i in range(roman['f_hundred']):
+#         converted['f_hundred'] +="D"
+#     else:
+#       converted['f_hundred'] += "CM"
+      
+#   if roman['hundred']!="":
+#     if roman['hundred']<4:
+#       for i in range(roman['hundred']):
+#         converted['hundred'] += "C"
+#     else:
+#       converted['hundred'] += "CD"
   
-  if roman['fifty']!= " ":
-    if roman['fifty']<9:
-      for i in range(roman['fifty']):
-        converted['fifty'] += "L"
-    else:
-      converted['fifty'] += "XC"
-  if roman['ten']!=" ":
-    if roman['ten']<4:
-      for i in range(roman['ten']):
-        converted['ten'] += "X"
-    else:
-      converted['ten']+= "XL"
+#   if roman['fifty']!= " ":
+#     if roman['fifty']<9:
+#       for i in range(roman['fifty']):
+#         converted['fifty'] += "L"
+#     else:
+#       converted['fifty'] += "XC"
+#   if roman['ten']!=" ":
+#     if roman['ten']<4:
+#       for i in range(roman['ten']):
+#         converted['ten'] += "X"
+#     else:
+#       converted['ten']+= "XL"
 
-  if roman['five'] !=" ":
-    if roman['five']<9:
-      for i in range(roman['five']):
-        converted['five'] +="V"
-    else:
-      converted['five']+="IX"
+#   if roman['five'] !=" ":
+#     if roman['five']<9:
+#       for i in range(roman['five']):
+#         converted['five'] +="V"
+#     else:
+#       converted['five']+="IX"
 
-  if roman['one'] !=" ":
-    if roman['one']<4:
-      for i in range(roman['one']):
-        converted['one'] +="I"
-    else:
-      converted['one'] +="IV"
+#   if roman['one'] !=" ":
+#     if roman['one']<4:
+#       for i in range(roman['one']):
+#         converted['one'] +="I"
+#     else:
+#       converted['one'] +="IV"
 
-  # converted['f_hundred']= str(roman['f_hundred'])
-  return converted
-  #print(converted)
+#   # converted['f_hundred']= str(roman['f_hundred'])
+#   return converted
+#   #print(converted)
 
-print(toRoman(roman))
+# print(toRoman(roman))
 
-converted = toRoman(roman)
-print(converted['thousands'] + converted['f_hundred']+converted['hundred']+converted['fifty']+converted['ten']+converted['five']+converted['one'])
+# converted = toRoman(roman)
+# print(converted['thousands'] + converted['f_hundred']+converted['hundred']+converted['fifty']+converted['ten']+converted['five']+converted['one'])
   
 
 
