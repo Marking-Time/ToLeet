@@ -46,3 +46,5 @@
   - The convert() function doesn't work correctly with all numbers
   - Need to rework the logic
 
+## I have a better idea - checkout old code to depricated branch
+
