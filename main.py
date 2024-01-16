@@ -79,8 +79,5 @@ for item in numbers:
     if digit == '8':
       digit = 'VIII'
       roman+=digit
-      
-    
-      
 
   print(roman)
