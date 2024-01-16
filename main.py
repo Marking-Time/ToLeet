@@ -52,12 +52,35 @@ for item in numbers:
   print(item)
   for digit in item:
     print(digit)
+    digit = digit[-1]
+    if digit == '4':
+      digit = 'IV'
     if digit == '5':
       digit = "V"
       roman+=digit
     if digit == '9':
       digit = "IX"
       roman+=digit
+    if digit == '1':
+      digit = 'I'
+      roman+=digit
+    if digit == '2':
+      digit = 'II'
+      roman+=digit
+    if digit == '3':
+      digit = 'III'
+      roman+=digit
+    if digit == '6':
+      digit = 'VI'
+      roman+=digit
+    if digit == '7':
+      digit = 'VII'
+      roman+=digit
+    if digit == '8':
+      digit = 'VIII'
+      roman+=digit
+      
+    
       
 
   print(roman)
