@@ -49,9 +49,25 @@ print(numbers)
 for item in numbers:
   # item = item[::-1]
   roman = ""
-  print(item)
-  for digit in item:
-    print(digit)
+  tens = ""
+  hundreds = ""
+  ones = item[-1]
+
+  if len(item) > 1:
+    tens = item[-2]
+    
+  if len(item) >2:
+    hundreds = item[-3]
+  # print(ones)
+  # print(tens)
+  print(hundreds)
+  r_numeral = ""
+  
+  
+  
+  # print(item)
+  for digit in ones:
+    # print(digit)
     digit = digit[-1]
     if digit == '4':
       digit = 'IV'
@@ -80,4 +96,38 @@ for item in numbers:
       digit = 'VIII'
       roman+=digit
 
-  print(roman)
+  # print(roman)
+  r_numeral = roman
+
+  for digit in tens:
+    digit = digit[:-2]
+    if digit == '4':
+      digit = 'XL'
+    if digit == '5':
+      digit = "L"
+      roman+=digit
+    if digit == '9':
+      digit = "XC"
+      roman+=digit
+    if digit == '1':
+      digit = 'X'
+      roman+=digit
+    if digit == '2':
+      digit = 'XX'
+      roman+=digit
+    if digit == '3':
+      digit = 'XXX'
+      roman+=digit
+    if digit == '6':
+      digit = 'LX'
+      roman+=digit
+    if digit == '7':
+      digit = 'LXX'
+      roman+=digit
+    if digit == '8':
+      digit = 'LXXX'
+      roman+=digit
+
+  r_numeral = r_numeral + roman
+  print(r_numeral)
+    
