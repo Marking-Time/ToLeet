@@ -51,12 +51,7 @@ def to_roman():
       thousands = item[:-3]
   
     r_numeral = ""
-    
-    
-    
-    
-   
-  
+
     if ones == "1":
       r_numeral = r_numeral + 1*"I"
   
@@ -83,11 +78,8 @@ def to_roman():
   
     if ones == "9":
       r_numeral = r_numeral + "IX"
-    
-    
-    # print(r_numeral)
-    # print(tens)
-  
+
+
     if tens == "1":
       r_numeral = "X" + r_numeral
   
@@ -145,11 +137,9 @@ def to_roman():
   
     if int(thousands)>1:
       r_numeral = str(thousands) + "xM" + r_numeral  
-    # print(r_numeral)
+
     roman.append(r_numeral)
-    
-    # return r_numeral
-    # print(type(r_numeral))
+
 to_roman()    
 print(roman)
       
