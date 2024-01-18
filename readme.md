@@ -8,3 +8,8 @@ This is the refactored code. The original code, along with the readme, is in the
 
 ### It shouldn't be this hard
 
+# To Roman
+## Works as expected
+- Returns a list of numbers found in the text converted to Roman Numberals.  Roman Numerals do not work above 4999, so I have used the convention of taking the number of thousands as a muliplier to the letter "M" and prepended that to the standard roman numeral
+
+
