@@ -22,13 +22,18 @@ print()
 
 #################################
 ################### Regex ###################
+m=[]
 def find_numbers(input_string):
   m = re.findall(r"(\d+)", input_string)
   print("Numbers list as m: "+str(m))
-  return
+  return m
+
+# print(find_numbers(input_string))
+# print(m)
+
   
 numbers = find_numbers(input_string)
-print()
+print(numbers)
 
 roman = []
 
@@ -42,18 +47,37 @@ romanD = {
     '6': "VI",
     '7': "VII",
     '8': "VII",
-    '9': "IX"    
-  }
+    '9': "IX"  
+  }, 
+  'tens': {
+      '1': "X",
+      '2': "XX",
+      '3': "XXX",
+      '4': "XL",
+      '5': "L",
+      '6': "LX",
+      '7': "LXX",
+      '8': "LXXX",
+      '9': "IC"
+        }
+  
 }
 
-print(romanD)
-print(romanD['ones']['8'])
-print(numbers)
-
+# print(romanD)
+# print(romanD['ones']['8'])
+# print(numbers)
+ones =''
 def to_roman(numbers):
   for item in numbers:
-    index = item[-1]
-    print(index)
+    ones = item[-1]
+    ones = str(ones)
+    # print(ones)
+    # print(romanD['ones']['1'])
+    rnumber= ""
+    rnumber += romanD['ones'][ones]
+    return rnumber
     # contunue
 
-# print(to_roman(numbers))
+print(to_roman(numbers))
+to_roman(numbers)
+# print(romanD['ones'][ones])
