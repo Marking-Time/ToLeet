@@ -59,7 +59,18 @@ romanD = {
       '7': "LXX",
       '8': "LXXX",
       '9': "IC"
-        }
+        },
+  'hundreds': {
+    '1': "C",
+    '2': "CC",
+    '3': "CCC",
+    '4': "CD",
+    '5': "D",
+    '6': "DC",
+    '7': "DCC",
+    '8': "DCCC",
+    '9': "CM",
+  }
   
 }
 
@@ -74,10 +85,20 @@ def to_roman(numbers):
     # print(ones)
     # print(romanD['ones']['1'])
     rnumber= ""
-    rnumber += romanD['ones'][ones]
+    if len(item[-2])>0:
+      rnumber += romanD['ones'][ones]
+      tens = item[-2]
+    try:
+      if len(item[-3])> 1:
+        rnumber = romanD['tens'][tens]+rnumber
+    except:
+      print("pass")
+
+      
+    
     return rnumber
     # contunue
 
 print(to_roman(numbers))
-to_roman(numbers)
+# to_roman(numbers)
 # print(romanD['ones'][ones])
