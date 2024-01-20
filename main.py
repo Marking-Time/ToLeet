@@ -25,8 +25,7 @@ print()
 def find_numbers(input_string):
   m = re.findall(r"(\d+)", input_string)
   print("Numbers list as m: "+str(m))
-  return m
-
+  return
 numbers = find_numbers(input_string)
 print()
 
