@@ -22,12 +22,14 @@ print()
 
 #################################
 ################### Regex ###################
+m=""
 def find_numbers(input_string):
   m = re.findall(r"(\d+)", input_string)
   print("Numbers list as m: "+str(m))
   return m
 
 numbers = find_numbers(input_string)
+print(m +"m")
 print()
 
 roman = []
