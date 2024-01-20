@@ -26,119 +26,34 @@ def find_numbers(input_string):
   m = re.findall(r"(\d+)", input_string)
   print("Numbers list as m: "+str(m))
   return
+  
 numbers = find_numbers(input_string)
 print()
 
 roman = []
 
-def to_roman():
+romanD = {
+  'ones': {
+    '1': "I",
+    '2': "II",
+    '3': "III",
+    '4': "IV",
+    '5': "V",
+    '6': "VI",
+    '7': "VII",
+    '8': "VII",
+    '9': "IX"    
+  }
+}
+
+print(romanD)
+print(romanD['ones']['8'])
+print(numbers)
+
+def to_roman(numbers):
   for item in numbers:
-    # # item = item[::-1]
-    # # roman = ""
-    # tens = ""
-    # hundreds = ""
-    # ones = item[-1]
-    # thousands = 0
-  
-    # if len(item) > 1:
-    #   tens = item[-2]
-    
-    # if len(item) >2:
-    #   hundreds = item[-3]
-  
-    # if len(item)>3:
-    #   thousands = item[:-3]
-  
-    # r_numeral = ""
+    index = item[-1]
+    print(index)
+    # contunue
 
-    # if ones == "1":
-    #   r_numeral = r_numeral + 1*"I"
-  
-    # if ones == "2":
-    #   r_numeral = r_numeral + 2*"I"
-  
-    # if ones == "3":
-    #   r_numeral = r_numeral + 3*"I"
-  
-    # if ones == "4":
-    #   r_numeral = r_numeral + "IV"
-  
-    # if ones == "5":
-    #   r_numeral = r_numeral + "V"
-  
-    # if ones == "6":
-    #   r_numeral = r_numeral + "VI"
-  
-    # if ones == "7":
-    #   r_numeral = r_numeral + "V" + 2*"I"
-  
-    # if ones == "8":
-    #   r_numeral = r_numeral + "V" + 3*"I"
-  
-    # if ones == "9":
-    #   r_numeral = r_numeral + "IX"
-
-
-    # if tens == "1":
-    #   r_numeral = "X" + r_numeral
-  
-    # if tens == "2":
-    #   r_numeral = 2*"X" + r_numeral
-  
-    # if tens == "3":
-    #   r_numeral = 3*"X" + r_numeral
-  
-    # if tens == "4":
-    #   r_numeral = "XL" + r_numeral
-  
-    # if tens == "5":
-    #   r_numeral = "L" + r_numeral
-  
-    # if tens == "6":
-    #   r_numeral = "LX" + r_numeral
-  
-    # if tens == "7":
-    #   r_numeral = "L" + 2*"X" + r_numeral
-  
-    # if tens == "8":
-    #   r_numeral = "L" + 3*"X" + r_numeral
-  
-    # if tens == "9":
-    #   r_numeral = "XC" + r_numeral
-  
-    # if hundreds == "1":
-    #   r_numeral = "C" + r_numeral
-  
-    # if hundreds == "2":
-    #   r_numeral = 2*"C" + r_numeral
-  
-    # if hundreds == "3":
-    #   r_numeral = 3*"C" + r_numeral
-  
-    # if hundreds == "4":
-    #   r_numeral = "CD" + r_numeral
-  
-    # if hundreds == "5":
-    #   r_numeral = "D"+ r_numeral
-  
-    # if hundreds == "6":
-    #   r_numeral = "D" + "C" + r_numeral
-  
-    # if hundreds == "7":
-    #   r_numeral = "D" + 2*"C" + r_numeral
-  
-    # if hundreds == "8":
-    #   r_numeral = "D" + 3*"C" + r_numeral
-  
-    # if hundreds == "9":
-    #   r_numeral = "CM" + r_numeral
-  
-  
-    # if int(thousands)>1:
-    #   r_numeral = str(thousands) + "xM" + r_numeral  
-
-    # roman.append(r_numeral)
-
-to_roman()    
-print(roman)
-      
+# print(to_roman(numbers))
