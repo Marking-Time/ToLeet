@@ -77,26 +77,28 @@ romanD = {
 # print(romanD)
 # print(romanD['ones']['8'])
 # print(numbers)
-ones =''
+
+
 def to_roman(numbers):
+  ones =''
+  tens = ''
+  hundreds = ''
+  rnumber = ''
   for item in numbers:
     ones = item[-1]
-    ones = str(ones)
-    # print(ones)
-    # print(romanD['ones']['1'])
-    rnumber= ""
+    rnumber = romanD['ones'][ones]
+        
     if len(item[-2])>0:
-      rnumber += romanD['ones'][ones]
       tens = item[-2]
-    try:
-      if len(item[-3])> 1:
-        rnumber = romanD['tens'][tens]+rnumber
-    except:
-      print("pass")
+      rnumber = romanD['tens'][tens] + rnumber
 
-      
-    
-    return rnumber
+    try:
+      if len(item[-3])>0:
+        hundreds= item[-3]
+        rnumber = romanD['hundreds'][hundreds] + rnumber
+    except:
+      pass
+      return rnumber
     # contunue
 
 print(to_roman(numbers))
