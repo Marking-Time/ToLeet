@@ -93,9 +93,12 @@ def to_roman(numbers):
     
     if len(item) >2:
       hundreds= item[-3]
-      print("hundreds: " + hundreds)
+      # print("hundreds: " + hundreds)
       rnumber = romanD['hundreds'][hundreds] + rnumber
 
+    if len(item)>3:
+      rnumber = item[:-3] + "xM " + rnumber
+    
     roman.append(rnumber)
   return rnumber
     # contunue
