@@ -1,5 +1,6 @@
 
 # To Leet
+This is the original code. The to_roman() function doesn't work correctly in the loop.  The problem is corrected in the other branches, so I feel no need to fix it here.
 ## This code converts english to leet.
 ### To Do:
 - Roman Numeral Conversion - The existing code only converts the digits  and not into the roman numeral syntax
