@@ -1,4 +1,5 @@
 #Takes a lower case string, numbers pass through to convert roman
+from typing import final
 import regex as re
 
 
@@ -58,7 +59,7 @@ romanD = {
       '6': "LX",
       '7': "LXX",
       '8': "LXXX",
-      '9': "IC"
+      '9': "XC"
         },
   'hundreds': {
     '1': "C",
@@ -74,17 +75,14 @@ romanD = {
   
 }
 
-# print(romanD)
-# print(romanD['ones']['8'])
-# print(numbers)
-
-
 def to_roman(numbers):
+  # print(numbers)
   ones =''
   tens = ''
   hundreds = ''
   rnumber = ''
   for item in numbers:
+    # print("test item: "  +item)
     ones = item[-1]
     rnumber = romanD['ones'][ones]
         
@@ -92,15 +90,17 @@ def to_roman(numbers):
       tens = item[-2]
       rnumber = romanD['tens'][tens] + rnumber
 
-    try:
-      if len(item[-3])>0:
-        hundreds= item[-3]
-        rnumber = romanD['hundreds'][hundreds] + rnumber
-    except:
-      pass
-      return rnumber
+    
+    if len(item) >2:
+      hundreds= item[-3]
+      print("hundreds: " + hundreds)
+      rnumber = romanD['hundreds'][hundreds] + rnumber
+
+    roman.append(rnumber)
+  return rnumber
     # contunue
 
-print(to_roman(numbers))
+to_roman(numbers)
+print(roman)
 # to_roman(numbers)
 # print(romanD['ones'][ones])
