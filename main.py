@@ -109,3 +109,11 @@ print(roman)
 # print(romanD['ones'][ones])
 
 # test
+
+def sum(arg):
+  total = 0
+  for val in arg:
+    total += val
+  return total
+data = [2,3]
+print(sum(data))
