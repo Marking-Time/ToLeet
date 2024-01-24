@@ -16,6 +16,8 @@ Returns a list of numbers found in the text converted to Roman Numberals.  Roman
 
 ## To Do
 - Add unit testing for to_roman
+  - Created test.py and ran a simple test on sum() which worked correctly
+  - I created a second test for to_roman() that fails in test, but not in live.  The code must be wrong, or I have wriiten the test incorrectly.
 
 
 

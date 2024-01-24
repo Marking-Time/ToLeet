@@ -17,7 +17,7 @@ def to_leet(string):
   return new_string
 
 print("input_string: "+input_string)
-print("toleet: "+to_leet(input_string))
+# print("toleet: "+to_leet(input_string))
 print()
 
 
@@ -86,9 +86,9 @@ def to_roman(numbers):
     ones = item[-1]
     rnumber = romanD['ones'][ones]
         
-    if len(item[-2])>0:
+    if len(item)>1:
       tens = item[-2]
-      rnumber = romanD['tens'][tens] + rnumber
+      rnumber = romanD['tens'][tens] + romanD['ones'][ones] + rnumber
 
     
     if len(item) >2:
