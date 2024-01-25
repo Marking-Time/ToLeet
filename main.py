@@ -77,12 +77,13 @@ romanD = {
 
 def to_roman(numbers):
   # print(numbers)
-  ones =''
-  tens = ''
-  hundreds = ''
+ 
   rnumber = []
   if len(numbers)>1:
     for item in numbers:
+      ones =''
+      tens = ''
+      hundreds = ''
       # print("test item: "  +item)
       ones = item[-1]
       ones = romanD['ones'][ones]
@@ -95,9 +96,10 @@ def to_roman(numbers):
         hundreds= item[-3]
         hundreds = romanD['hundreds'][hundreds] 
 
-      toList = hundreds+tens+ones
-      print("tolist " + toList)
-      rnumber.append(toList)
+      itemNumber = hundreds+tens+ones
+      print("tolist " + itemNumber)
+      rnumber.append(itemNumber)
+      
       
 
   
@@ -122,7 +124,7 @@ def to_roman(numbers):
       rnumber = hundreds+ tens+ ones
       # rnumber = [hundreds, tens, ones]
     
-   
+  print("test +"+ str(rnumber) )
     # print("ones + " + ones)
     # rnumber = [hundreds +tens+ones]
     # print(rnumber)
@@ -130,7 +132,7 @@ def to_roman(numbers):
     
     
     # rnumb?er = item[-1]
-    return rnumber
+  return rnumber
     # contunue
 
 print(to_roman(numbers))
