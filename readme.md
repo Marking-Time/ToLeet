@@ -4,6 +4,7 @@ This repo contains sveral branches to represent the different methods I used to 
 2. The bunch_of_ifs branch uses many if statements to convert the arabic numerals to Roman Numerals.
 3. I have created a new branch named test.  I probably should have named it differently because I have tradtionaly used that name as a sort of throw away name when I was working on desktops and networks. The branch was created to try out unit testing, but in the process I found some bugs. This file will track the changes to on the test branch, which will prbably become the main branch. Status:
     - I keep getting an out of range error when I run the code for unit testing.  I think it may be due to the test filel being a single string as opposed to a list that the regular code processes.
+    - I finished the day with some progress. I need to do some testing to check for functionality
 4. depricated-initial is my first atempt ... it works but is kludgy
 
 ## to_leet - This code converts english to leet.
