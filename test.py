@@ -16,7 +16,7 @@ class TestRoman(unittest.TestCase):
     """
     Test that it can convert a number to roman numerals
     """
-    data = '12'
+    data = ['12','13']
     result = to_roman(data)
     self.assertEqual(result, 'XII')
     
