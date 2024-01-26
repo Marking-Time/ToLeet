@@ -21,7 +21,8 @@ Returns a list of numbers found in the text converted to Roman Numberals.  Roman
 ## To Do
 - Add unit testing for to_roman
 - Unit testing revealed some issues that I'm working on
-1/26/2024
+  
+##### 1/26/2024
 - I had the code tested and running for a bit, but ended the day with three tests failing
 - Not sure what is going on, but it has something to do with how the zeros are processed. It may need to be refactored at this point.
 
