@@ -127,7 +127,7 @@ def to_roman(numbers):
         hundreds= item[-3]
         hundreds = romanD['hundreds'][hundreds]
       else: 
-        hundreds = '' 
+        hundreds = None 
 
       if len(item)>3:
         thousands = item[0:-3]
@@ -138,8 +138,8 @@ def to_roman(numbers):
       #   thousands = ""
         
     # insert = [ones]
-      itemNumber = hundreds+tens+ones #problem
-      rnumber.append(itemNumber)
+        itemNumber = thousands+hundreds+tens+ones #problem
+        rnumber.append(itemNumber)
       # rnumber = [hundreds, tens, ones]
     
   print("test +"+ str(rnumber) )
