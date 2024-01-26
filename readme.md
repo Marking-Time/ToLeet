@@ -19,6 +19,7 @@ Returns a list of numbers found in the text converted to Roman Numberals.  Roman
 
 ## To Do
 - Add unit testing for to_roman
+- Unit testing revealed some issues that I'm working on
 
 
 
