@@ -25,6 +25,10 @@ Returns a list of numbers found in the text converted to Roman Numberals.  Roman
 ##### 1/26/2024
 - I had the code tested and running for a bit, but ended the day with three tests failing
 - Not sure what is going on, but it has something to do with how the zeros are processed. It may need to be refactored at this point.
+##### 1/27/2024
+- Worked all day on testing in the test branch
+- still having trouble in the logical program flow
+- I need to diagram it out 
 
 
 
