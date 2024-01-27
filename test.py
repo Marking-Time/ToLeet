@@ -1,15 +1,15 @@
 import unittest
-from main import sum
+# from main import sum
 from main import to_roman
 
-class TestSum(unittest.TestCase):
-  def test_list_init(self):
-    """
-    Test that it can sum a list of integers
-    """
-    data = [1, 2, 3]
-    result = sum(data)
-    self.assertEqual(result, 6)
+# class TestSum(unittest.TestCase):
+#   def test_list_init(self):
+#     """
+#     Test that it can sum a list of integers
+#     """
+#     data = [1, 2, 3]
+#     result = sum(data)
+#     self.assertEqual(result, 6)
 
 class TestRoman(unittest.TestCase):
   def test_ones(self):

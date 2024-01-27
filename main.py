@@ -5,7 +5,7 @@ import regex as re
 
 leet = {"a": "4", "b": "13", "c":"[", "d":"[)", "e":"3", "f":"|=","g": "6", "h":"#", "i": "|","j":".]", "k":"|<", "l":"1","m":"|y|", "n":"|\|", "o":"0", "p":"|>", "q":"o,","r":"I2", "s":"5", "t":"7", "u":"[_]", "v":"-v", "w":"|v|", "x":"}{", "y":"'/","z":"2", "1":"i", "2":"ii", "3":"iii", "4":"iv", "5":"v", "6":"vi", "7":"vii", "8":"viii", "9":"ix","0":".", " ":" ", "-":"3", ".":"3", ",":"3"}
 
-input_string = "-10000-WASHINGTON  Sen. Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common -long number- ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday She was -- -twentyThree- "
+input_string = "-10000-WASHINGTON  Sen.9 Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common -long number- ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday235 She was -- -twentyThree- "
 
 def to_leet(string):
   string = str(string)
@@ -116,29 +116,29 @@ def to_roman(numbers):
       if item[-1] != 0:
         ones = item[-1]
         ones = romanD['ones'][ones]
-      else:
-        ones = ""
-      if len(item)>1:
-        tens = item[-2]
-        tens = romanD['tens'][tens]
-      else:
-        tens = ""
-      if len(item) >2:
-        hundreds= item[-3]
-        hundreds = romanD['hundreds'][hundreds]
-      else: 
-        hundreds = None 
+      # else:
+      #   ones = ""
+      # if len(item)>1:
+      #   tens = item[-2]
+      #   tens = romanD['tens'][tens]
+      # else:
+      #   tens = ""
+      # if len(item) >2:
+      #   hundreds= item[-3]
+      #   hundreds = romanD['hundreds'][hundreds]
+      # else: 
+      #   hundreds = None 
 
-      if len(item)>3:
-        thousands = item[0:-3]
-        thousands =  thousands+"xM"
-        print("thousands "+thousands)
+      # if len(item)>3:
+      #   thousands = item[0:-3]
+      #   thousands =  thousands+"xM"
+        # print("thousands "+thousands)
         # print('type thousands: '+ str(type(thousands) ))
       # else:
       #   thousands = ""
         
     # insert = [ones]
-        itemNumber = thousands+hundreds+tens+ones #problem
+        itemNumber = ones #problem thousands+hundreds+tens+
         rnumber.append(itemNumber)
       # rnumber = [hundreds, tens, ones]
     
@@ -160,12 +160,12 @@ print(to_roman(numbers))
 
 # test
 
-def sum(arg):
-  total = 0
-  for val in arg:
-    total += val
-  return total
-data = [2,3]
-print()
-print("sum function results below")
-print(sum(data))
+# def sum(arg):
+#   total = 0
+#   for val in arg:
+#     total += val
+#   return total
+# data = [2,3]
+# print()
+# print("sum function results below")
+# print(sum(data))
