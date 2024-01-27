@@ -5,7 +5,7 @@ import regex as re
 
 leet = {"a": "4", "b": "13", "c":"[", "d":"[)", "e":"3", "f":"|=","g": "6", "h":"#", "i": "|","j":".]", "k":"|<", "l":"1","m":"|y|", "n":"|\|", "o":"0", "p":"|>", "q":"o,","r":"I2", "s":"5", "t":"7", "u":"[_]", "v":"-v", "w":"|v|", "x":"}{", "y":"'/","z":"2", "1":"i", "2":"ii", "3":"iii", "4":"iv", "5":"v", "6":"vi", "7":"vii", "8":"viii", "9":"ix","0":".", " ":" ", "-":"3", ".":"3", ",":"3"}
 
-input_string = "-10000-WASHINGTON  Sen.9 Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common -long number- ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday235 She was -- -twentyThree- "
+input_string = "--WASHINGTON  Sen. Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common -long number- ground with Republicans during her three decades in the Senate, has died, her office confirmed on 12 She was -- -twentyThree- "
 
 def to_leet(string):
   string = str(string)
@@ -80,43 +80,72 @@ romanD = {
 
 def to_roman(numbers):
   # print(numbers)
- 
   rnumber = []
+  
   if len(numbers)>1:
+  
     for item in numbers:
+      print(item)
+      print("item--------> "+ item)
       ones =''
       tens = ''
       hundreds = ''
-      # print("test item: "  +item)
+      itemNumber = []  
       ones = item[-1]
-      ones = romanD['ones'][ones]
+      # rnumber = []
+      rnumber.append(romanD['ones'][ones])
           
       if len(item)>1:
+        print("length of item ------->"+ str(len(item)))
         tens = item[-2]
         tens = romanD['tens'][tens]
+        print("tens ---> "+tens)
+        rnumber.append(ones)
+        # rnumber.append(tens)
         
-      if len(item) >2:
-        hundreds= item[-3]
-        hundreds = romanD['hundreds'][hundreds] 
+      # if len(item) >2:
+      #   hundreds= item[-3]
+      #   hundreds = romanD['hundreds'][hundreds] 
 
-      if len(item)>3:
-        thousands = item[0:-3]
-        thousands =  thousands+"xM"
-        print("thousands "+thousands)
-        # print('type thousands: '+ str(type(thousands) ))
-      else:
-        thousands = ""
-      
-      itemNumber = thousands+hundreds+tens+ones
-      print("tolist " + itemNumber)
-      rnumber.append(itemNumber)
-      
-  else:
-    for item in numbers:
-      if item[-1] != 0:
-        ones = item[-1]
-        ones = romanD['ones'][ones]
+      # if len(item)>3:
+      #   thousands = item[0:-3]
+      #   thousands =  thousands+"xM"
+      #   print("thousands "+thousands)
+      #   # print('type thousands: '+ str(type(thousands) ))
       # else:
+      #   thousands = ""
+      #   print("tens ---> "+ tens)
+      #   itemNumber = thousands+hundreds+tens+ones
+      #   print("itemNumber------> " + itemNumber)
+      #   rnumber.append(itemNumber)
+  
+  else: 
+    for item in numbers:
+      print("item in else-----> " +item)
+      print("length------> " +str(len(item)))
+      # rnumber= []
+      # if len(item)==1:  
+      ones = item[-1]
+      ones = romanD['ones'][ones]
+      rnumber.append(ones)
+      # if len(item)==2:
+      #   tens = item[-2]
+      #   tens = romanD['tens'][tens]
+      #   rnumber.append(tens)
+
+      # if len(item)==3:
+      #   hundreds = item[-3]
+      # # if item[-1] != 0:
+
+      # if len(item)==1:
+      #   ones = item[-1]
+      #   ones = romanD['ones'][ones]
+      #   rnumber.append(ones)
+
+      # if len(item)==2:
+        
+        # rnumbe
+      #   continue
       #   ones = ""
       # if len(item)>1:
       #   tens = item[-2]
@@ -137,9 +166,9 @@ def to_roman(numbers):
       # else:
       #   thousands = ""
         
-    # insert = [ones]
-        itemNumber = ones #problem thousands+hundreds+tens+
-        rnumber.append(itemNumber)
+    # # insert = [ones]
+        # itemNumber = ones #problem thousands+hundreds+tens+
+      # rnumber.append(ones)
       # rnumber = [hundreds, tens, ones]
     
   print("test +"+ str(rnumber) )

@@ -17,13 +17,13 @@ class TestRoman(unittest.TestCase):
     result = to_roman(data)
     self.assertEqual(result, ['IX'])
   
-  # def test_tens(self):
-  #   """
-  #   Test that it can convert a number to roman numerals
-  #   """
-  #   data = ['12']
-  #   result = to_roman(data)
-  #   self.assertEqual(result, ['XII'])
+  def test_tens(self):
+    """
+    Test that it can convert a number to roman numerals
+    """
+    data = ['12']
+    result = to_roman(data)
+    self.assertEqual(result, ['XII'])
 
 
 
