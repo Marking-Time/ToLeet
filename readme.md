@@ -18,6 +18,10 @@ Uses regx to find and extract the numbers from an input string. Returns a list.
 ### Works as expected
 Returns a list of numbers found in the text converted to Roman Numberals.  Roman Numerals do not work above 4999, so I have used the convention of taking the number of thousands as a muliplier to the letter "M" and prepended that to the standard roman numeral
 
+## Unit Testing
+- I created four unit tests one for the ones, tens, hundreds and thousands places
+- All run correctly with no errors
+
 ## To Do
 - Add unit testing for to_roman
 - Unit testing revealed some issues that I'm working on
@@ -28,7 +32,10 @@ Returns a list of numbers found in the text converted to Roman Numberals.  Roman
 ##### 1/27/2024
 - Worked all day on testing in the test branch
 - still having trouble in the logical program flow
-- I need to diagram it out 
+- I need to diagram it out
+##### 1/28/2024
+- Unit testing complete
+- Need to spruce up the code and repo
 
 
 
