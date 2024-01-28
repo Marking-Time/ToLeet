@@ -5,7 +5,7 @@ import regex as re
 
 leet = {"a": "4", "b": "13", "c":"[", "d":"[)", "e":"3", "f":"|=","g": "6", "h":"#", "i": "|","j":".]", "k":"|<", "l":"1","m":"|y|", "n":"|\|", "o":"0", "p":"|>", "q":"o,","r":"I2", "s":"5", "t":"7", "u":"[_]", "v":"-v", "w":"|v|", "x":"}{", "y":"'/","z":"2", "1":"i", "2":"ii", "3":"iii", "4":"iv", "5":"v", "6":"vi", "7":"vii", "8":"viii", "9":"ix","0":".", " ":" ", "-":"3", ".":"3", ",":"3"}
 
-input_string = "65WASHINGTON  Sen. Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common 841895 ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday She was 999 xx23"
+input_string = "1WASHINGTON 23 Sen.999 Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common  ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday She was  "
 
 def to_leet(string):
   string = str(string)
@@ -36,7 +36,7 @@ def find_numbers(input_string):
 numbers = find_numbers(input_string)
 print(numbers)
 
-roman = []
+
 
 romanD = {
   'ones': {
@@ -75,6 +75,12 @@ romanD = {
   
 }
 
+print(romanD['tens']['2'])
+
+print()
+print()
+print()
+roman = []
 def to_roman(numbers):
   # print(numbers)
   ones =''
@@ -82,28 +88,56 @@ def to_roman(numbers):
   hundreds = ''
   rnumber = ''
   for item in numbers:
-    # print("test item: "  +item)
-    ones = item[-1]
-    rnumber = romanD['ones'][ones]
+    if len(item) == 1:
+      ones = item[0]
+      ones = romanD['ones'][ones]
+      rnumber = ones
+      roman.append(rnumber)
+   
+    if len(item) == 2:
+      ones = romanD['ones'][item[-1]]
+      tens = romanD['tens'][item[-2]]
+      rnumber = tens+ones
+      # hundreds = romanD['hundred'][item[-3]]
+      roman.append(rnumber)
+
+    if len(item) == 3:
+      ones = romanD['ones'][item[-1]]
+      tens = romanD['tens'][item[-2]]
+      hundreds = romanD['hundreds'][item[-3]]
+     
+      rnumber = hundreds+tens+ones
+      roman.append(rnumber)
+
+    # if len(item)== 3:
+      
+
+    
+
+    
+    # # print("test item: "  +item)
+    # ones = item[-1]
+    # rnumber = romanD['ones'][ones]
         
-    if len(item[-2])>0:
-      tens = item[-2]
-      rnumber = romanD['tens'][tens] + rnumber
+    # if len(item[-2])>0:
+    #   tens = item[-2]
+    #   rnumber = romanD['tens'][tens] + rnumber
 
     
-    if len(item) >2:
-      hundreds= item[-3]
-      # print("hundreds: " + hundreds)
-      rnumber = romanD['hundreds'][hundreds] + rnumber
+    # if len(item) >2:
+    #   hundreds= item[-3]
+    #   # print("hundreds: " + hundreds)
+    #   rnumber = romanD['hundreds'][hundreds] + rnumber
 
-    if len(item)>3:
-      rnumber = item[:-3] + "xM " + rnumber
+    # if len(item)>3:
+    #   rnumber = item[:-3] + "xM " + rnumber
     
-    roman.append(rnumber)
+    # roman.append(rnumber)
   return rnumber
     # contunue
 
-to_roman(numbers)
+print(to_roman(numbers))
+
 print(roman)
 # to_roman(numbers)
 # print(romanD['ones'][ones])
