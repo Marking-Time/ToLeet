@@ -5,7 +5,7 @@ import regex as re
 
 leet = {"a": "4", "b": "13", "c":"[", "d":"[)", "e":"3", "f":"|=","g": "6", "h":"#", "i": "|","j":".]", "k":"|<", "l":"1","m":"|y|", "n":"|\|", "o":"0", "p":"|>", "q":"o,","r":"I2", "s":"5", "t":"7", "u":"[_]", "v":"-v", "w":"|v|", "x":"}{", "y":"'/","z":"2", "1":"i", "2":"ii", "3":"iii", "4":"iv", "5":"v", "6":"vi", "7":"vii", "8":"viii", "9":"ix","0":".", " ":" ", "-":"3", ".":"3", ",":"3"}
 
-input_string = "--WASHINGTON  Sen. Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common -long number- ground with Republicans during her three decades in the Senate, has died, her office confirmed on 12 She was -- -twentyThree- "
+input_string = "-7-WASHINGTON  Sen. Dianne Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common -long number- ground with Republicans during her three decades in the Senate, has died, her office confirmed on 12 She was -- -twentyThree- "
 
 def to_leet(string):
   string = str(string)
@@ -34,7 +34,7 @@ def find_numbers(input_string):
 
   
 numbers = find_numbers(input_string)
-print(numbers)
+# print(numbers)
 
 roman = []
 
@@ -79,11 +79,8 @@ romanD = {
 }
 
 def to_roman(numbers):
-  
-  if len(numbers)>1:
-  
-    for item in numbers:
-      print(item)
+  for number in numbers:
+      print(number)
       # print("item--------> "+ item)
       # ones =''
       # tens = ''
@@ -180,7 +177,7 @@ def to_roman(numbers):
   # return rnumber
     # contunue
 
-# print(to_roman(numbers))
+print(to_roman(numbers))
 
 
 
