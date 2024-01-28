@@ -18,6 +18,11 @@ class TestRoman(unittest.TestCase):
     result = to_roman(data)
     self.assertEqual(result, 'C')
 
+  def test_thousands(self):
+    data = ['994321']
+    result = to_roman(data)
+    self.assertEqual(result, '994xMCCCXXI')
+
 
 if __name__ == '__main__':
   unittest.main()
