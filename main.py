@@ -79,28 +79,26 @@ romanD = {
 }
 
 def to_roman(numbers):
-  # print(numbers)
-  rnumber = []
   
   if len(numbers)>1:
   
     for item in numbers:
       print(item)
-      print("item--------> "+ item)
-      ones =''
-      tens = ''
-      hundreds = ''
-      itemNumber = []  
-      ones = item[-1]
+      # print("item--------> "+ item)
+      # ones =''
+      # tens = ''
+      # hundreds = ''
+      # itemNumber = []  
+      # ones = item[-1]
       # rnumber = []
-      rnumber.append(romanD['ones'][ones])
+      # # rnumber.append(romanD['ones'][ones])
           
-      if len(item)>1:
-        print("length of item ------->"+ str(len(item)))
-        tens = item[-2]
-        tens = romanD['tens'][tens]
-        print("tens ---> "+tens)
-        rnumber.append(ones)
+      # if len(item)==1:
+      #   print("length of item ------->"+ str(len(item)))
+      #   tens = item[-2]
+      #   tens = romanD['tens'][tens]
+      #   print("tens ---> "+tens)
+      #   rnumber.append(ones)
         # rnumber.append(tens)
         
       # if len(item) >2:
@@ -119,19 +117,19 @@ def to_roman(numbers):
       #   print("itemNumber------> " + itemNumber)
       #   rnumber.append(itemNumber)
   
-  else: 
-    for item in numbers:
-      print("item in else-----> " +item)
-      print("length------> " +str(len(item)))
-      # rnumber= []
-      # if len(item)==1:  
-      ones = item[-1]
-      ones = romanD['ones'][ones]
-      rnumber.append(ones)
-      # if len(item)==2:
-      #   tens = item[-2]
-      #   tens = romanD['tens'][tens]
-      #   rnumber.append(tens)
+  # else: 
+  #   for item in numbers:
+  #     print("item in else-----> " +item)
+  #     print("length------> " +str(len(item)))
+  #     # rnumber= []
+  #     # if len(item)==1:  
+  #     ones = item[-1]
+  #     ones = romanD['ones'][ones]
+  #     rnumber.append(ones)
+  #     if len(item)==2:
+  #       tens = item[-2]
+  #       tens = romanD['tens'][tens]
+  #       rnumber.append(tens)
 
       # if len(item)==3:
       #   hundreds = item[-3]
@@ -171,7 +169,7 @@ def to_roman(numbers):
       # rnumber.append(ones)
       # rnumber = [hundreds, tens, ones]
     
-  print("test +"+ str(rnumber) )
+  # print("test +"+ str(rnumber) )
     # print("ones + " + ones)
     # rnumber = [hundreds +tens+ones]
     # print(rnumber)
@@ -179,10 +177,13 @@ def to_roman(numbers):
     
     
     # rnumb?er = item[-1]
-  return rnumber
+  # return rnumber
     # contunue
 
-print(to_roman(numbers))
+# print(to_roman(numbers))
+
+
+
 # print(roman)
 # to_roman(numbers)
 # print(romanD['ones'][ones])
