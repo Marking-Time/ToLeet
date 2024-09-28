@@ -1,5 +1,5 @@
 #Takes a lower case string, numbers pass through to convert roman
-from typing import final
+#from typing import final
 import re as re
 
 
