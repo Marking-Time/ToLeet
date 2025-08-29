@@ -2,13 +2,14 @@
 #from typing import final
 import re as re
 
-
+# ==== arabic to leet dictinary ===
 leet = {"a": "4", "b": "13", "c":"[", "d":"[)", "e":"3", "f":"|=","g": "6", "h":"#", "i": "|","j":".]", "k":"|<", "l":"1","m":"|y|", "n":"^", "o":"0", "p":"|>", "q":"o,","r":"I2", "s":"5", "t":"7", "u":"[_]", "v":"-v", "w":"|v|", "x":"}{", "y":"'/","z":"2", "1":"i", "2":"ii", "3":"iii", "4":"iv", "5":"v", "6":"vi", "7":"vii", "8":"viii", "9":"ix","0":".", " ":" ", "-":"3", ".":"3", ",":"3",".":"..."}
 
+# ==== gets text from user ===
 input_string = input("Enter the text and or number to convert to Leet and Roman Numerals: \n")
 
-# input_string = "1WASHINGTON 23 Sen.999 Dianne994321 Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common  ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday She was  "
-
+# =========== Code to convert to leet ============
+# == Numbers converted to roman numeral DIGITS ===
 def to_leet(string):
   string = str(string)
   string = string.lower()
@@ -18,6 +19,7 @@ def to_leet(string):
     new_string += letter
   return new_string
 
+# === Printing Output === 
 print("======= Prints ======= ")
 print("1. Input String") 
 print("2. The Leet for the Input String")
@@ -28,8 +30,7 @@ print("toleet: "+to_leet(input_string))
 print()
 
 
-#################################
-################### Regex ###################
+################### Regex used to convert to roman numerals ###################
 m=[]
 def find_numbers(input_string):
   m = re.findall(r"(\d+)", input_string)
@@ -45,7 +46,7 @@ numbers = find_numbers(input_string)
 # print(numbers)
 
 
-
+# =========== Dictinary  for Roman Numerals======
 romanD = {
   'ones': {
     '0': "",
@@ -86,11 +87,7 @@ romanD = {
   
 }
 
-# print(romanD['tens']['2'])
-
-# print()
-# print()
-# print()
+# ========= Code to convert Arabic to Roman ======== 
 roman = []
 def to_roman(numbers):
   # print(numbers)
@@ -132,36 +129,9 @@ def to_roman(numbers):
       rnumber = thousands+hundreds+tens+ones
       roman.append(rnumber)
       # print('thousands --> '+thousands)
-
-
-      
-
-    
-
-    
-    # # print("test item: "  +item)
-    # ones = item[-1]
-    # rnumber = romanD['ones'][ones]
-        
-    # if len(item[-2])>0:
-    #   tens = item[-2]
-    #   rnumber = romanD['tens'][tens] + rnumber
-
-    
-    # if len(item) >2:
-    #   hundreds= item[-3]
-    #   # print("hundreds: " + hundreds)
-    #   rnumber = romanD['hundreds'][hundreds] + rnumber
-
-    # if len(item)>3:
-    #   rnumber = item[:-3] + "xM " + rnumber
-    
-    # roman.append(rnumber)
+      # return rnumber
+  
   return rnumber
-    # contunue
+# ========= End of For Loop & to_roman() =======
 
-print("Numbers converted to Roman: " + to_roman(numbers))
-
-# print(roman)
-# to_roman(numbers)
-# print(romanD['ones'][ones])
+print("Numbers converted to Roman: "+ to_roman(numbers))
