@@ -1,5 +1,6 @@
 
 # To Leet 
+## Code is documented
 This repo contains sveral branches to represent the different methods I used to solve the problem. All branches contain the same to_leet and find_numbers code, but the code for the to_roman changes with each branch.
 1. The main branch is my best effort, because it seems most readable to me.
 2. The bunch_of_ifs branch uses many if statements to convert the arabic numerals to Roman Numerals.
