@@ -3,9 +3,11 @@
 import re as re
 
 
-leet = {"a": "4", "b": "13", "c":"[", "d":"[)", "e":"3", "f":"|=","g": "6", "h":"#", "i": "|","j":".]", "k":"|<", "l":"1","m":"|y|", "n":"|\|", "o":"0", "p":"|>", "q":"o,","r":"I2", "s":"5", "t":"7", "u":"[_]", "v":"-v", "w":"|v|", "x":"}{", "y":"'/","z":"2", "1":"i", "2":"ii", "3":"iii", "4":"iv", "5":"v", "6":"vi", "7":"vii", "8":"viii", "9":"ix","0":".", " ":" ", "-":"3", ".":"3", ",":"3"}
+leet = {"a": "4", "b": "13", "c":"[", "d":"[)", "e":"3", "f":"|=","g": "6", "h":"#", "i": "|","j":".]", "k":"|<", "l":"1","m":"|y|", "n":"^", "o":"0", "p":"|>", "q":"o,","r":"I2", "s":"5", "t":"7", "u":"[_]", "v":"-v", "w":"|v|", "x":"}{", "y":"'/","z":"2", "1":"i", "2":"ii", "3":"iii", "4":"iv", "5":"v", "6":"vi", "7":"vii", "8":"viii", "9":"ix","0":".", " ":" ", "-":"3", ".":"3", ",":"3",".":"..."}
 
-input_string = "1WASHINGTON 23 Sen.999 Dianne994321 Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common  ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday She was  "
+input_string = input("Enter the text and or number to convert to Leet and Roman Numerals: \n")
+
+# input_string = "1WASHINGTON 23 Sen.999 Dianne994321 Feinstein, D-Calif., a vocal advocate of gun control measures who was known for trying to find common  ground with Republicans during her three decades in the Senate, has died, her office confirmed on Friday She was  "
 
 def to_leet(string):
   string = str(string)
@@ -15,6 +17,11 @@ def to_leet(string):
     letter = leet[letter]
     new_string += letter
   return new_string
+
+print("======= Prints ======= ")
+print("1. Input String") 
+print("2. The Leet for the Input String")
+print()
 
 print("input_string: "+input_string)
 print("toleet: "+to_leet(input_string))
@@ -26,15 +33,16 @@ print()
 m=[]
 def find_numbers(input_string):
   m = re.findall(r"(\d+)", input_string)
-  print("Numbers list as m: "+str(m))
+  # print("Numbers list as m: "+str(m))
   return m
 
-# print(find_numbers(input_string))
-# print(m)
+print("RegEx output: ")
+print(find_numbers(input_string))
+print()
 
   
 numbers = find_numbers(input_string)
-print(numbers)
+# print(numbers)
 
 
 
@@ -78,11 +86,11 @@ romanD = {
   
 }
 
-print(romanD['tens']['2'])
+# print(romanD['tens']['2'])
 
-print()
-print()
-print()
+# print()
+# print()
+# print()
 roman = []
 def to_roman(numbers):
   # print(numbers)
@@ -123,7 +131,7 @@ def to_roman(numbers):
 
       rnumber = thousands+hundreds+tens+ones
       roman.append(rnumber)
-      print('thousands --> '+thousands)
+      # print('thousands --> '+thousands)
 
 
       
@@ -152,8 +160,8 @@ def to_roman(numbers):
   return rnumber
     # contunue
 
-print(to_roman(numbers))
+print("Numbers converted to Roman: " + to_roman(numbers))
 
-print(roman)
+# print(roman)
 # to_roman(numbers)
 # print(romanD['ones'][ones])
